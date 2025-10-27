@@ -7,14 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .team-card {
-            animation: fadeIn 0.6s ease-out forwards;
-            opacity: 0;
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .team-card { animation: fadeIn 0.6s ease-out forwards; opacity: 0; }
         .team-card:nth-child(1) { animation-delay: 0.1s; }
         .team-card:nth-child(2) { animation-delay: 0.2s; }
         .team-card:nth-child(3) { animation-delay: 0.3s; }
@@ -26,138 +20,141 @@
     </style>
 </head>
 <body class="bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white min-h-screen">
-    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-40 glass">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-2">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                        </svg>
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                     </div>
                     <span class="text-2xl font-bold bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">ShowVault</span>
                 </a>
-                
                 <div class="hidden md:flex items-center gap-8">
                     <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a>
                     <a href="portfolio.html" class="text-gray-300 hover:text-white transition-colors">Portfolio</a>
                     <a href="team.html" class="text-violet-400 font-medium">Team</a>
                     <a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a>
                 </div>
-
-                <button class="hidden md:block px-6 py-2.5 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-medium hover:shadow-lg hover:shadow-violet-500/50 transition-all">
-                    Start Project
-                </button>
-
+                <button class="hidden md:block px-6 py-2.5 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-medium hover:shadow-lg hover:shadow-violet-500/50 transition-all">Start Project</button>
                 <button id="mobileMenuBtn" class="md:hidden text-white">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
-
             <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-4">
-                <a href="index.html" class="block text-gray-300 hover:text-white">Home</a>
-                <a href="portfolio.html" class="block text-gray-300 hover:text-white">Portfolio</a>
+                <a href="index.html" class="block text-gray-300">Home</a>
+                <a href="portfolio.html" class="block text-gray-300">Portfolio</a>
                 <a href="team.html" class="block text-violet-400">Team</a>
-                <a href="about.html" class="block text-gray-300 hover:text-white">About</a>
+                <a href="about.html" class="block text-gray-300">About</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <div class="min-h-screen pt-24 px-6 pb-16">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                    Meet Our Team
-                </h1>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-                    Talented individuals passionate about creating exceptional digital experiences
-                </p>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Meet Our Team</h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">Talented individuals passionate about creating exceptional digital experiences</p>
             </div>
 
-            <!-- Team Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <!-- Team Member 1 -->
                 <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
                     <div class="aspect-square overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Sarah Chen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Sarah Chen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
                     </div>
-                    
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                        <p class="text-gray-300 text-sm mb-4">10+ years in machine learning and neural networks. Former AI researcher at leading tech companies.</p>
-                        <div class="flex gap-3">
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
+                        <p class="text-gray-300 text-sm mb-4">10+ years in machine learning. Former AI researcher at leading tech companies.</p>
                     </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Sarah Chen</h3>
+                        <p class="text-violet-400 font-medium">Lead AI Engineer</p>
+                    </div>
+                </div>
 
+                <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Marcus Rivera" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <p class="text-gray-300 text-sm mb-4">Award-winning designer. Featured in top design publications worldwide.</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Marcus Rivera</h3>
+                        <p class="text-violet-400 font-medium">Creative Director</p>
+                    </div>
+                </div>
+
+                <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Aisha Patel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <p class="text-gray-300 text-sm mb-4">Expert in native and cross-platform development. Built apps used by millions.</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Aisha Patel</h3>
+                        <p class="text-violet-400 font-medium">Mobile Architect</p>
+                    </div>
+                </div>
+
+                <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="James Ko" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <p class="text-gray-300 text-sm mb-4">Versatile engineer with deep cloud expertise. Scalable architecture specialist.</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">James Ko</h3>
+                        <p class="text-violet-400 font-medium">Full Stack Developer</p>
+                    </div>
+                </div>
+
+                <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" alt="Emma Wilson" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <p class="text-gray-300 text-sm mb-4">UX researcher with expertise in user psychology. Creates interfaces people love.</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Emma Wilson</h3>
+                        <p class="text-violet-400 font-medium">UX Designer</p>
+                    </div>
+                </div>
+
+                <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="David Chen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <p class="text-gray-300 text-sm mb-4">Blockchain specialist with expertise in smart contracts and decentralized systems.</p>
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-1">David Chen</h3>
                         <p class="text-violet-400 font-medium">Blockchain Engineer</p>
                     </div>
                 </div>
 
-                <!-- Team Member 7 -->
                 <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
                     <div class="aspect-square overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80" alt="Sofia Rodriguez" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80" alt="Sofia Rodriguez" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
                     </div>
-                    
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                        <p class="text-gray-300 text-sm mb-4">Data scientist specializing in analytics and machine learning. PhD in Computer Science.</p>
-                        <div class="flex gap-3">
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
+                        <p class="text-gray-300 text-sm mb-4">Data scientist specializing in analytics and ML. PhD in Computer Science.</p>
                     </div>
-
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-1">Sofia Rodriguez</h3>
                         <p class="text-violet-400 font-medium">Data Scientist</p>
                     </div>
                 </div>
 
-                <!-- Team Member 8 -->
                 <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
                     <div class="aspect-square overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="Alex Turner" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="Alex Turner" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
                     </div>
-                    
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                        <p class="text-gray-300 text-sm mb-4">DevOps engineer focused on automation and continuous deployment. Kubernetes certified.</p>
-                        <div class="flex gap-3">
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
+                        <p class="text-gray-300 text-sm mb-4">DevOps engineer focused on automation. Kubernetes certified professional.</p>
                     </div>
-
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-1">Alex Turner</h3>
                         <p class="text-violet-400 font-medium">DevOps Engineer</p>
@@ -165,40 +162,29 @@
                 </div>
             </div>
 
-            <!-- Call to Action -->
             <div class="mt-16 p-12 rounded-3xl bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10 border border-violet-500/30 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Want to Join Our Team?</h2>
-                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                    We're always looking for talented individuals who are passionate about creating exceptional digital experiences.
-                </p>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">We're always looking for talented individuals passionate about digital experiences.</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="px-8 py-4 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-medium hover:shadow-lg hover:shadow-violet-500/50 transition-all">
-                        View Open Positions
-                    </button>
-                    <button class="px-8 py-4 rounded-xl glass text-white font-medium hover:bg-white/10 transition-all">
-                        Learn About Our Culture
-                    </button>
+                    <button class="px-8 py-4 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-medium hover:shadow-lg hover:shadow-violet-500/50 transition-all">View Open Positions</button>
+                    <button class="px-8 py-4 rounded-xl glass text-white font-medium hover:bg-white/10 transition-all">Learn About Our Culture</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="border-t border-white/10 bg-slate-900/50">
         <div class="max-w-7xl mx-auto px-6 py-12">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center gap-2 mb-4">
                         <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                            </svg>
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                         </div>
                         <span class="text-xl font-bold bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">ShowVault</span>
                     </div>
                     <p class="text-gray-400 text-sm">Crafting digital excellence for ambitious brands worldwide.</p>
                 </div>
-                
                 <div>
                     <h3 class="font-semibold text-white mb-4">Quick Links</h3>
                     <div class="space-y-2">
@@ -208,7 +194,6 @@
                         <a href="about.html" class="block text-gray-400 hover:text-violet-400 transition-colors text-sm">About</a>
                     </div>
                 </div>
-                
                 <div>
                     <h3 class="font-semibold text-white mb-4">Services</h3>
                     <div class="space-y-2 text-sm text-gray-400">
@@ -218,7 +203,6 @@
                         <div>UI/UX Design</div>
                     </div>
                 </div>
-                
                 <div>
                     <h3 class="font-semibold text-white mb-4">Contact</h3>
                     <div class="space-y-2 text-sm text-gray-400">
@@ -228,7 +212,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-gray-400 text-sm">© 2024 CodeBex. All rights reserved.</p>
                 <div class="flex gap-6">
@@ -241,151 +224,9 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
+            document.getElementById('mobileMenu').classList.toggle('hidden');
         });
     </script>
 </body>
-</html>24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-1">Sarah Chen</h3>
-                        <p class="text-violet-400 font-medium">Lead AI Engineer</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 2 -->
-                <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
-                    <div class="aspect-square overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Marcus Rivera" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                        <p class="text-gray-300 text-sm mb-4">Award-winning designer with a passion for innovation. Featured in top design publications worldwide.</p>
-                        <div class="flex gap-3">
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-7.21.873-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-1">Marcus Rivera</h3>
-                        <p class="text-violet-400 font-medium">Creative Director</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 3 -->
-                <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
-                    <div class="aspect-square overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Aisha Patel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                        <p class="text-gray-300 text-sm mb-4">Expert in native and cross-platform development. Built apps used by millions worldwide.</p>
-                        <div class="flex gap-3">
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-1">Aisha Patel</h3>
-                        <p class="text-violet-400 font-medium">Mobile Architect</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 4 -->
-                <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
-                    <div class="aspect-square overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="James Ko" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                        <p class="text-gray-300 text-sm mb-4">Versatile engineer with deep cloud expertise. Specializes in scalable architecture and DevOps.</p>
-                        <div class="flex gap-3">
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-1">James Ko</h3>
-                        <p class="text-violet-400 font-medium">Full Stack Developer</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 5 -->
-                <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
-                    <div class="aspect-square overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" alt="Emma Wilson" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                        <p class="text-gray-300 text-sm mb-4">UX researcher with expertise in user psychology. Creates interfaces people love to use.</p>
-                        <div class="flex gap-3">
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-7.21.873-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-1">Emma Wilson</h3>
-                        <p class="text-violet-400 font-medium">UX Designer</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 6 -->
-                <div class="team-card group relative rounded-2xl overflow-hidden glass hover:border-violet-500/50 transition-all">
-                    <div class="aspect-square overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="David Chen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                        <p class="text-gray-300 text-sm mb-4">Blockchain specialist with expertise in smart contracts and decentralized systems.</p>
-                        <div class="flex gap-3">
-                            <a href="#" class="w-8 h-8 rounded-full glass flex items-center justify-center hover:bg-violet-500/20 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0
+</html>
